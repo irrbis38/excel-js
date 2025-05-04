@@ -1,2 +1,41 @@
-.idea
-node-modules
+# macOS системные файлы
+.DS_Store
+
+# IDE и редакторы
+.idea/
+.vscode/
+
+# Node.js зависимости
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Локальные файлы окружения
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Файлы сборки
+dist/
+build/
+
+# Кэш
+.cache/
+.temp/
+.tmp/
+
+# Логи
+logs/
+*.log
+
+# Пакетные менеджеры
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Source maps
+*.map

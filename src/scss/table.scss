@@ -1,0 +1,73 @@
+@use "./variables" as var;
+@use "mixins";
+
+.table {
+  flex: 1 1 100%;
+  overflow-x: auto;
+}
+
+.table__row {
+  display: flex;
+  height: var.$row_height;
+  min-height: 20px;
+}
+
+.table__info {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: var.$first_column_width;
+  min-height: 100%;
+  border: 1px solid var.$border_color;
+  border-top: none;
+  border-left: none;
+}
+
+.table__data {
+  display: flex;
+}
+
+.table__column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var.$cell_width;
+  min-width: 40px;
+  min-height: 100%;
+  background-color: #f8f9fa;
+  border: 1px solid var.$border_color;
+  border-top: none;
+  border-left: none;
+}
+
+.table__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var.$cell_width;
+  min-width: 40px;
+  min-height: 100%;
+  padding: 5px;
+  border: 1px solid var.$border_color;
+  border-top: none;
+  border-left: none;
+  outline: none;
+  appearance: none;
+  cursor: text;
+
+  &.table__cell--selected {
+    position: relative;
+    border-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      border: 2px solid #3c74ff;
+    }
+  }
+}

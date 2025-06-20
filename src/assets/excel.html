@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Excel Clone App</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="excel">
+
+      <div class="panel">
+
+        <div class="header">
+          <input class="header__input" type="text" value="Новая таблица" />
+
+          <div class="header__buttons">
+            <button class="header__button header__button--delete" type="button" aria-label="Удалить"></button>
+            <button class="header__button header__button--exit" type="button" aria-label="Выйти"></button>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <button class="toolbar__button toolbar__button--align-left" type="button" aria-label="Выровнять по левому краю"></button>
+          <button class="toolbar__button toolbar__button--align-center" type="button" aria-label="Выровнять по центру"></button>
+          <button class="toolbar__button toolbar__button--align-right" type="button" aria-label="Выровнять по правому краю"></button>
+          <button class="toolbar__button toolbar__button--bold" type="button" aria-label="Сделать жирным"></button>
+          <button class="toolbar__button toolbar__button--italic" type="button" aria-label="Сделать italic"></button>
+          <button class="toolbar__button toolbar__button--underline" type="button" aria-label="Сделать подчёркнутым"></button>
+        </div>
+
+        <div class="formula">
+
+          <div class="formula__info">Fx</div>
+
+          <div class="formula__input" contenteditable spellcheck="false"></div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="table">
+
+        <div class="table__row table__row--top">
+          <div class="table__info"></div>
+          <div class="table__data">
+            <div class="table__column">A</div>
+            <div class="table__column">B</div>
+            <div class="table__column">C</div>
+          </div>
+        </div>
+
+        <div class="table__row">
+          <div class="table__info">1</div>
+          <div class="table__data">
+            <div class="table__cell table__cell--selected" contenteditable spellcheck="false">content</div>
+            <div class="table__cell" contenteditable spellcheck="false">content</div>
+            <div class="table__cell" contenteditable spellcheck="false">content</div>
+          </div>
+        </div>
+
+        <div class="table__row">
+          <div class="table__info">1</div>
+          <div class="table__data">
+            <div class="table__cell table__cell--selected" contenteditable spellcheck="false">content</div>
+            <div class="table__cell" contenteditable spellcheck="false">content</div>
+            <div class="table__cell" contenteditable spellcheck="false">content</div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</body>
+
+</html>

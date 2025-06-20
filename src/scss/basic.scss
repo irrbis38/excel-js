@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  font-variation-settings: "wdth" 100;
+}
+
+#app,
+.excel {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.excel {
+  max-width: 100%;
+}
+
+.panel {
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+}

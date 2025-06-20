@@ -1,6 +1,8 @@
-$red: red;
-$green: green;
+@use "~normalize.css" as normalize;
 
-body {
-  background-color: $green;
-}
+@use "basic";
+@use "header";
+@use "toolbar";
+@use "formula";
+@use "table";
+@use "dashboard";

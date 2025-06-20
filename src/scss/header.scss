@@ -1,0 +1,79 @@
+@use "./variables" as var;
+@use "mixins";
+
+.header {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var.$header_height;
+  padding: 8px 4px 0;
+}
+
+.header__input {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  margin: 0;
+  padding: 2px 7px;
+  font-size: 18px;
+  line-height: 22;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: none;
+  appearance: none;
+  transition: border-color 0.2s ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      border: 1px solid #c0c0c0;
+    }
+  }
+
+  &:focus {
+    border: 1px solid #1a73e8;
+  }
+}
+
+.header__button {
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  cursor: pointer;
+
+  @include mixins.button();
+
+  &:active {
+    &::after {
+      transform: scale(0.9);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform 0.2s ease-out;
+  }
+}
+
+.header__button--delete {
+  @include mixins.button-hover-colors(rgba(222, 26, 36, 0.1), rgba(222, 26, 36, 0.7));
+
+  &::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23000'%3E%3Cpath d='M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z'/%3E%3C/svg%3E");
+  }
+}
+
+.header__button--exit {
+  @include mixins.button-hover-colors(rgba(63, 143, 41, 0.1), rgba(63, 143, 41, 0.7));
+
+  &::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23000' viewBox='0 -960 960 960'%3E%3Cpath d='M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z'/%3E%3C/svg%3E");
+  }
+}

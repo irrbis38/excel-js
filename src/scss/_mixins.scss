@@ -1,0 +1,29 @@
+@mixin button() {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin button-hover-colors($bgHoverColor: rgba(0, 0, 0, 0.2), $borderHoverColor: rgba(0, 0, 0, 0.7)) {
+  @media (hover: hover) {
+    &:hover {
+      background-color: $bgHoverColor;
+      border-color: $borderHoverColor;
+    }
+  }
+}
+
+@mixin clear-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
